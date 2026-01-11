@@ -1,0 +1,101 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Resources", href: "/resources" },
+  { name: "Contact", href: "/contact" },
+];
+
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        scrolled
+          ? "bg-primary text-primary-foreground shadow-md"
+          : "bg-transparent text-primary" // Transparent initially or white/light depending on hero
+      )}
+    >
+      <div className="container flex h-20 items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="relative h-12 w-12 overflow-hidden rounded-lg">
+                <Image src="/icon.png" alt="ASOL Logo" fill className="object-cover" />
+            </div>
+            <span className={cn("font-heading text-2xl font-bold tracking-tight", scrolled ? "text-white" : "text-primary")}>
+              ASOL
+            </span>
+          </Link>
+        </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-secondary",
+                scrolled ? "text-white/90" : "text-primary/90"
+              )}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Button 
+            variant={scrolled ? "secondary" : "default"} // Gold button on blue bg, Blue button on light bg
+            size="lg"
+            className="font-semibold shadow-lg"
+          >
+            Request Consultation
+          </Button>
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className={cn("md:hidden p-2 transition-colors", scrolled ? "text-white" : "text-primary")}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-background border-b shadow-xl p-6 flex flex-col gap-4 animate-in slide-in-from-top-5">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-lg font-medium text-foreground hover:text-primary py-2 border-b border-border/50"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Button className="w-full mt-4" size="lg">Request Consultation</Button>
+        </div>
+      )}
+    </header>
+  );
+}

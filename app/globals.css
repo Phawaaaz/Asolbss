@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem; /* mobile padding */
+  @media (width >= 1024px) { /* desktop padding */
+      padding-inline: 2rem;
+  }
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1200px; /* Max content width as per spec */
+  }
+}
+
+/* 
+  Color System Conversion:
+  Primary Blue: #0B3C5D -> HSL 204 79% 20%
+  Gold Accent: #C9A227 -> HSL 46 68% 47%
+  Soft Grey: #F5F6F8 -> HSL 210 14% 97%
+  Success: #1F8A70
+  Warning: #E36414
+  Error: #B00020
+  Text Primary: #1A1A1A
+  Text Secondary: #5F6368
+*/
+
+:root {
+  --background: hsl(0 0% 100%);     /* White */
+  --foreground: hsl(0 0% 10%);      /* Black #1A1A1A approx */
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 10%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 10%);
+
+  /* Deep Blue - Used for Buttons / Highlights */
+  --primary: hsl(204 79% 20%); 
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* Gold - Minimal usage or re-purpose */
+  --secondary: hsl(46 68% 47%);
+  --secondary-foreground: hsl(0 0% 100%);
+
+  /* Soft Grey for sections */
+  --muted: hsl(210 20% 98%);
+  --muted-foreground: hsl(215 16% 40%);
+
+  --accent: hsl(210 20% 98%);
+  --accent-foreground: hsl(204 79% 20%);
+
+  --destructive: hsl(349 100% 35%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(214 32% 90%);
+  --input: hsl(214 32% 90%);
+  --ring: hsl(204 79% 20%);
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(204 79% 10%);
+  --foreground: hsl(0 0% 98%);
+  
+  --card: hsl(204 79% 12%);
+  --card-foreground: hsl(0 0% 98%);
+
+  --popover: hsl(204 79% 10%);
+  --popover-foreground: hsl(0 0% 98%);
+
+  --primary: hsl(204 79% 20%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(46 68% 47%);
+  --secondary-foreground: hsl(0 0% 100%);
+
+  --muted: hsl(204 30% 20%);
+  --muted-foreground: hsl(215 20% 65%);
+
+  --accent: hsl(204 30% 20%);
+  --accent-foreground: hsl(0 0% 98%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(204 30% 25%);
+  --input: hsl(204 30% 25%);
+  --ring: hsl(204 79% 20%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-foreground;
+  }
+}
