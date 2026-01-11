@@ -11,7 +11,6 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -66,8 +65,9 @@ export function Header() {
             variant={scrolled ? "secondary" : "default"} // Gold button on blue bg, Blue button on light bg
             size="lg"
             className="font-semibold shadow-lg"
+            asChild
           >
-            Request Consultation
+            <Link href="/contact">Request Consultation</Link>
           </Button>
         </nav>
 
@@ -93,7 +93,9 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button className="w-full mt-4" size="lg">Request Consultation</Button>
+          <Button className="w-full mt-4" size="lg" asChild>
+            <Link href="/contact">Request Consultation</Link>
+          </Button>
         </div>
       )}
     </header>
