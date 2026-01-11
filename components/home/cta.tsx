@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function CTA() {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-20 md:py-32 bg-muted/30">
       <div className="container">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-primary-foreground md:px-12 md:py-24 shadow-2xl">
           <div className="relative z-10 mx-auto max-w-3xl">

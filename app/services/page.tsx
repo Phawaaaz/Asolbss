@@ -17,9 +17,14 @@ export default function ServicesPage() {
             <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6 text-foreground">
               Comprehensive Corporate Solutions
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              We offer a wide range of financial, advisory, and professional services designed to support businesses at every stage — from startup to sustainable expansion.
-            </p>
+            <div className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto space-y-4">
+              <p>
+                Licensed professionals providing expert financial administration, banking consultancy, credit analysis, arbitration, and corporate advisory services to organisations and institutions.
+              </p>
+              <p>
+                Licensed professionals delivering financial management, credit advisory, banking consultancy, and corporate support solutions for banks, SMEs, and corporate organisations.
+              </p>
+            </div>
         </div>
       </section>
 

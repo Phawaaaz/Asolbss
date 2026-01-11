@@ -84,8 +84,14 @@
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(0 0% 10%);
 
-  /* Deep Blue - Used for Buttons / Highlights */
-  --primary: hsl(204 79% 20%); 
+  /* User Provided Palette */
+  --brand-dark: hsl(218 70% 19%);   /* #0F2854 */
+  --brand-primary: hsl(214 67% 33%); /* #1C4D8D */
+  --brand-light: hsl(209 52% 53%);  /* #4988C4 */
+  --brand-pale: hsl(194 71% 85%);   /* #BDE8F5 */
+
+  /* Primary Blue - Using #1C4D8D */
+  --primary: var(--brand-primary); 
   --primary-foreground: hsl(0 0% 100%);
 
   /* Gold - Minimal usage or re-purpose */
@@ -96,47 +102,49 @@
   --muted: hsl(210 20% 98%);
   --muted-foreground: hsl(215 16% 40%);
 
-  --accent: hsl(210 20% 98%);
-  --accent-foreground: hsl(204 79% 20%);
+  --accent: var(--brand-pale); /* Using pale blue for accents */
+  --accent-foreground: var(--brand-dark);
 
   --destructive: hsl(349 100% 35%);
   --destructive-foreground: hsl(0 0% 100%);
 
   --border: hsl(214 32% 90%);
   --input: hsl(214 32% 90%);
-  --ring: hsl(204 79% 20%);
+  --ring: var(--brand-primary);
 
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: hsl(204 79% 10%);
+  --background: var(--brand-dark); /* Using Brand Dark as background base? Or just dark blue? Let's keep strict dark mode for now but maybe tint it? */
+  --background: hsl(218 70% 10%); /* Very dark version of brand dark */
   --foreground: hsl(0 0% 98%);
   
-  --card: hsl(204 79% 12%);
+  --card: hsl(218 70% 12%);
   --card-foreground: hsl(0 0% 98%);
 
-  --popover: hsl(204 79% 10%);
+  --popover: hsl(218 70% 10%);
   --popover-foreground: hsl(0 0% 98%);
 
-  --primary: hsl(204 79% 20%);
+  /* Use lighter blue for primary in dark mode for better visibility? Or stick to brand? */
+  --primary: var(--brand-light); /* #4988C4 looks better on dark */
   --primary-foreground: hsl(0 0% 100%);
 
   --secondary: hsl(46 68% 47%);
   --secondary-foreground: hsl(0 0% 100%);
 
-  --muted: hsl(204 30% 20%);
+  --muted: hsl(218 30% 20%);
   --muted-foreground: hsl(215 20% 65%);
 
-  --accent: hsl(204 30% 20%);
+  --accent: hsl(218 30% 20%);
   --accent-foreground: hsl(0 0% 98%);
 
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
 
-  --border: hsl(204 30% 25%);
-  --input: hsl(204 30% 25%);
-  --ring: hsl(204 79% 20%);
+  --border: hsl(218 30% 25%);
+  --input: hsl(218 30% 25%);
+  --ring: var(--brand-light);
 }
 
 @layer base {

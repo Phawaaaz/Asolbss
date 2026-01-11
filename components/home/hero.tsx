@@ -25,7 +25,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            ASOL Business Solutions provides micro-credit services, professional advisory, and strategic consultancy to help you achieve sustainable results.
+            ASOL Business Solutions is a licensed professional providing expert financial administration, banking consultancy, credit analysis, arbitration, and corporate advisory services to organisations and institutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center">

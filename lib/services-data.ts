@@ -4,7 +4,11 @@ import {
   TrendingUp, 
   PieChart, 
   FileText, 
-  GraduationCap 
+  GraduationCap,
+  Landmark,
+  Scale,
+  Briefcase,
+  Calculator 
 } from "lucide-react";
 
 export const services = [
@@ -101,6 +105,82 @@ export const services = [
       "Staff of financial institutions",
       "Business owners",
       "Students and graduates"
+    ]
+  },
+  {
+    slug: "banking-consultancy",
+    title: "Banking Consultancy",
+    shortDescription: "Expert consultancy for banking institutions and financial organizations.",
+    fullDescription: "We offer specialized banking consultancy services, helping financial institutions optimize their operations, manage risks, and improve service delivery. Our team brings deep industry knowledge to solve complex banking challenges.",
+    icon: Landmark,
+    benefits: [
+      "Operational efficiency optimization",
+      "Risk management strategies",
+      "Regulatory compliance support",
+      "Digital transformation advisory"
+    ],
+    targetAudience: [
+      "Banks",
+      "Microfinance institutions",
+      "Fintech companies",
+      "Financial regulators"
+    ]
+  },
+  {
+    slug: "arbitration-mediation",
+    title: "Arbitration & Mediation",
+    shortDescription: "Professional dispute resolution and arbitration services.",
+    fullDescription: "Our arbitration and mediation services provide a constructive path for resolving business disputes. We help parties reach mutually beneficial agreements without the time and expense of litigation, preserving business relationships.",
+    icon: Scale,
+    benefits: [
+      "Cost-effective dispute resolution",
+      "Confidential proceedings",
+      "Preservation of business relationships",
+      "Expert neutral mediators"
+    ],
+    targetAudience: [
+      "Corporate entities",
+      "Business partners",
+      "Contractors",
+      "Organizations in dispute"
+    ]
+  },
+  {
+    slug: "corporate-support-solutions",
+    title: "Corporate Support Solutions",
+    shortDescription: "Comprehensive support solutions for corporate organizations.",
+    fullDescription: "We provide end-to-end corporate support solutions, handling administrative, operational, and strategic functions so you can focus on your core business. From restructuring to process improvement, we are your partners in efficiency.",
+    icon: Briefcase,
+    benefits: [
+      "Organizational restructuring",
+      "Process optimization",
+      "Administrative support",
+      "Strategic HR planning"
+    ],
+    targetAudience: [
+      "Large corporations",
+      "Growing SMEs",
+      "Multinational companies",
+      "Public sector organizations"
+    ]
+  },
+  {
+    slug: "financial-management",
+    title: "Financial Management",
+    shortDescription: "Strategic financial management and planning for sustainable growth.",
+    fullDescription: "Our financial management services ensure your resources are used effectively to achieve your business goals. We provide budgeting, forecasting, and financial control services to secure your organization's financial future.",
+    icon: Calculator,
+    benefits: [
+      "Budgeting and forecasting",
+      "Cash flow management",
+      "Cost reduction strategies",
+      "Financial reporting and control"
+    ],
+    targetAudience: [
+      "Business owners",
+      "Corporate finance departments",
+      "Non-profit organizations",
+      "Investment firms"
     ]
   }
 ];

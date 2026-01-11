@@ -31,7 +31,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">Visit Us</h3>
                 <p className="text-muted-foreground">
-                    Abeokuta, Ogun State<br />Nigeria
+                    Suite SM 79 & 80 Sapon Shopping Mall,<br />Sapon, Abeokuta, Ogun State.
                 </p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-border shadow-sm text-center hover:shadow-md transition-all hover:border-primary/20">
@@ -39,14 +39,14 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6" />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">Email Us</h3>
-                <p className="text-muted-foreground">contact@asolbs.com</p>
+                <p className="text-muted-foreground">Contact@asolsolution.com</p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-border shadow-sm text-center hover:shadow-md transition-all hover:border-primary/20">
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                     <Phone className="h-6 w-6" />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">Call Us</h3>
-                <p className="text-muted-foreground">08034547851</p>
+                <p className="text-muted-foreground">08174220000, 08034547851</p>
             </div>
         </div>
 

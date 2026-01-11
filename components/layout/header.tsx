@@ -31,17 +31,17 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-primary text-primary-foreground shadow-md"
-          : "bg-transparent text-primary" // Transparent initially or white/light depending on hero
+          ? "bg-white/95 backdrop-blur-md text-primary shadow-md border-b border-border/10"
+          : "bg-transparent text-primary" // Transparent initially
       )}
     >
       <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-12 w-12 overflow-hidden rounded-lg">
+            <div className="relative h-16 w-16 overflow-hidden rounded-lg">
                 <Image src="/icon.png" alt="ASOL Logo" fill className="object-cover" />
             </div>
-            <span className={cn("font-heading text-2xl font-bold tracking-tight", scrolled ? "text-white" : "text-primary")}>
+            <span className={cn("font-heading text-3xl font-bold tracking-tight text-primary")}>
               ASOL
             </span>
           </Link>
@@ -55,14 +55,14 @@ export function Header() {
               href={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-secondary",
-                scrolled ? "text-white/90" : "text-primary/90"
+                "text-primary/90"
               )}
             >
               {item.name}
             </Link>
           ))}
           <Button 
-            variant={scrolled ? "secondary" : "default"} // Gold button on blue bg, Blue button on light bg
+            variant="default"
             size="lg"
             className="font-semibold shadow-lg"
             asChild
@@ -73,7 +73,7 @@ export function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={cn("md:hidden p-2 transition-colors", scrolled ? "text-white" : "text-primary")}
+          className={cn("md:hidden p-2 transition-colors text-primary")}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

@@ -9,10 +9,10 @@ export function Footer() {
         {/* Company Summary */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-             <div className="relative h-12 w-12 overflow-hidden rounded-lg">
+             <div className="relative h-16 w-16 overflow-hidden rounded-lg">
                 <Image src="/icon.png" alt="ASOL Logo" fill className="object-cover" />
              </div>
-             <span className="font-heading text-2xl font-bold">ASOL</span>
+             <span className="font-heading text-3xl font-bold">ASOL</span>
           </div>
           <p className="text-secondary-foreground/80 text-sm leading-relaxed max-w-xs">
             We provide structured financial advice, business planning support, and professional consultancy services that drive growth and stability for individuals and organizations.
@@ -59,15 +59,15 @@ export function Footer() {
           <div className="space-y-4 text-sm text-secondary-foreground/80">
             <p className="flex flex-col">
               <span className="font-semibold text-white mb-1">Office Address:</span>
-              <span>Abeokuta, Ogun State</span>
+              <span>Suite SM 79 & 80 Sapon Shopping Mall,<br />Sapon, Abeokuta, Ogun State.</span>
             </p>
             <div className="flex flex-col">
               <span className="font-semibold text-white mb-1">Phone:</span>
-              <span>08034547851</span>
+              <span>08174220000, 08034547851</span>
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-white mb-1">Email:</span>
-              <span>contact@asolbs.com</span>
+              <span>Contact@asolsolution.com</span>
             </div>
           </div>
         </div>
