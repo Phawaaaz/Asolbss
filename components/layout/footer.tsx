@@ -9,8 +9,8 @@ export function Footer() {
         {/* Company Summary */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-             <div className="relative h-16 w-16 overflow-hidden rounded-lg">
-                <Image src="/icon.png" alt="ASOL Logo" fill className="object-cover" />
+             <div className="relative h-20 w-20 overflow-hidden rounded-lg">
+                <Image src="/asolwhite.png" alt="ASOL Logo" fill className="object-cover" />
              </div>
              <span className="font-heading text-3xl font-bold">ASOL</span>
           </div>

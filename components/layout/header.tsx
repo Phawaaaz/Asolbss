@@ -36,9 +36,9 @@ export function Header() {
       )}
     >
       <div className="container flex h-20 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-16 w-16 overflow-hidden rounded-lg">
+        <div className="flex items-center ">
+          <Link href="/" className="flex items-center">
+            <div className="relative h-20 w-20 overflow-hidden rounded-lg">
                 <Image src="/icon.png" alt="ASOL Logo" fill className="object-cover" />
             </div>
             <span className={cn("font-heading text-3xl font-bold tracking-tight text-primary")}>

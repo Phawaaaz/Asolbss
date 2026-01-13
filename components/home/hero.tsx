@@ -30,10 +30,10 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center">
             <Button size="lg" className="h-14 px-8 text-lg font-semibold bg-primary hover:bg-primary/90 rounded-full shadow-xl shadow-primary/20">
-              Request Consultation
+              <Link href="/contact">Request Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-semibold border-2 border-muted hover:bg-muted text-foreground rounded-full">
-              Explore Services
+              <Link href="/contact">Explore Service</Link>
             </Button>
           </div>
 
