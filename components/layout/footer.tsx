@@ -32,7 +32,7 @@ export function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-heading text-lg font-semibold mb-6">Quick Links</h4>
+          <h4 className="font-heading text-lg font-extrabold mb-4 text-white">Quick Links</h4>
           <ul className="space-y-3">
             <li><Link href="/" className="text-sm hover:text-secondary transition-colors">Home</Link></li>
             <li><Link href="/about" className="text-sm hover:text-secondary transition-colors">About Us</Link></li>
@@ -43,7 +43,7 @@ export function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="font-heading text-lg font-semibold mb-6">Our Services</h4>
+          <h4 className="font-heading text-lg font-extrabold mb-4 text-white">Our Services</h4>
           <ul className="space-y-3">
             <li><Link href="/services/micro-credit-services" className="text-sm hover:text-secondary transition-colors">Micro-Credit Services</Link></li>
             <li><Link href="/services/business-advisory-planning" className="text-sm hover:text-secondary transition-colors">Business Advisory</Link></li>
@@ -55,7 +55,7 @@ export function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-heading text-lg font-semibold mb-6">Contact Us</h4>
+          <h4 className="font-heading text-lg font-extrabold mb-4 text-white">Contact Us</h4>
           <div className="space-y-4 text-sm text-secondary-foreground/80">
             <p className="flex flex-col">
               <span className="font-semibold text-white mb-1">Office Address:</span>
