@@ -5,7 +5,11 @@ import { Award, CheckCircle2, Target, Users, TrendingUp, Shield, Lightbulb } fro
 
 export const metadata: Metadata = {
   title: "About Us | ASOL Business Solutions",
-  description: "Learn about ASOL's mission to drive business excellence through financial empowerment and professional advisory.",
+  description: "Learn about ASOL's mission to drive business excellence through financial empowerment, professional advisory, and ethical corporate support.",
+  openGraph: {
+    title: "About ASOL Business Solutions",
+    description: "Driven by Integrity, Professionalism, and Client Success.",
+  },
 };
 
 export default function AboutPage() {

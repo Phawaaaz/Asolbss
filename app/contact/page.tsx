@@ -4,7 +4,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us | ASOL Business Solutions",
-  description: "Get in touch with ASOL for your business needs. We are ready to help you transform and grow.",
+  description: "Get in touch with ASOL Business Solutions. Visit our office in Abeokuta, call us, or send a message for expert financial advice.",
+  keywords: ["Contact ASOL", "Business Consultation Nigeria", "Office Address", "Customer Support"],
 };
 
 export default function ContactPage() {

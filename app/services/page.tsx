@@ -1,9 +1,13 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { services } from "@/lib/services-data";
 import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | Micro-Credit, Banking & Advisory",
+  description: "Explore our expert services: Micro-Credit, Business Advisory, Banking Consultancy, Credit Risk Management, and more.",
+};
 
 export default function ServicesPage() {
   return (
