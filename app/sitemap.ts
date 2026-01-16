@@ -1,30 +1,42 @@
 import { MetadataRoute } from 'next'
+import { services } from '@/lib/services-data'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const baseUrl = 'https://asolbs.com'
+
+  const staticRoutes = [
     {
-      url: 'https://asolbs.com',
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'yearly' as const,
       priority: 1,
     },
     {
-      url: 'https://asolbs.com/about',
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
-      url: 'https://asolbs.com/services',
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
-      url: 'https://asolbs.com/contact',
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
   ]
+
+  const serviceRoutes = services.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticRoutes, ...serviceRoutes]
 }
