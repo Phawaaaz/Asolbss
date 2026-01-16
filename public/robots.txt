@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.asolsolution.com
+
+# Sitemaps
+Sitemap: https://www.asolsolution.com/sitemap.xml
