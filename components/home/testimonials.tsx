@@ -4,38 +4,24 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import Image from "next/image";
+
 const testimonials = [
   {
     id: 1,
-    company: "TechCorp Industries",
-    author: "John Mensah",
+    company: "Funseka Travel Service",
+    author: "FUNMILAYO SEKONI",
     position: "CEO",
-    content: "ASOL Business Solutions transformed our financial operations with their expert consultancy. Their credit analysis helped us secure crucial funding for expansion.",
-    logo: "/logos/techcorp.png"
+    content: "ASOL Business Solutions has been instrumental in stabilizing our financial operations during volatile market periods. Their advisory services helped us navigate complex challenges with confidence.",
+    logo: "/funsekaTravelService.png"
   },
   {
     id: 2,
-    company: "Global Ventures Ltd",
-    author: "Amina Hassan",
-    position: "CFO",
-    content: "The arbitration services provided by ASOL were exceptional. They helped us resolve complex disputes efficiently while maintaining professional relationships.",
-    logo: "/logos/global-ventures.png"
-  },
-  {
-    id: 3,
-    company: "Premier Banking Group",
-    author: "David Osei",
-    position: "Managing Director",
-    content: "Their banking consultancy expertise is unmatched. ASOL's strategic advice has been instrumental in our institution's growth and risk management.",
-    logo: "/logos/premier-banking.png"
-  },
-  {
-    id: 4,
-    company: "Innovation Holdings",
-    author: "Sarah Johnson",
-    position: "Director of Operations",
-    content: "ASOL's corporate advisory services provided the clarity and direction we needed. Their structured approach to business planning delivered measurable results.",
-    logo: "/logos/innovation.png"
+    company: "Orchid Build Innovation",
+    author: "Management",
+    position: "Executive Director",
+    content: "Their corporate support solutions have streamlined our administrative processes, allowing us to focus on our core construction projects. A truly reliable partner for growth.",
+    logo: "/orchildbuildinnovation.png"
   }
 ];
 
@@ -81,7 +67,8 @@ export function Testimonials() {
     return () => clearInterval(timer);
   }, [currentIndex]);
 
-  const current = testimonials[currentIndex];
+  const safeIndex = (currentIndex >= 0 && currentIndex < testimonials.length) ? currentIndex : 0;
+  const current = testimonials[safeIndex];
 
   return (
     <section className="py-24 bg-muted/30 overflow-hidden">
@@ -132,14 +119,17 @@ export function Testimonials() {
 
                 {/* Author info */}
                 <footer className="mt-8 pt-6 border-t border-border">
-                  {/* Optional: Company logo */}
-                  {/* {current.logo && (
-                    <img
-                      src={current.logo}
-                      alt={current.company}
-                      className="h-8 mx-auto mb-4 opacity-60"
-                    />
-                  )} */}
+                  {/* Company logo */}
+                  {current.logo && (
+                    <div className="relative h-12 w-32 mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity">
+                      <Image
+                        src={current.logo}
+                        alt={current.company}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
                   <div className="font-semibold text-foreground">{current.author}</div>
                   <div className="text-sm text-muted-foreground">
                     {current.position}, {current.company}
