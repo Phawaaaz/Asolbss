@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://asolbs.com/sitemap.xml',
+sitemap: 'https://www.asolsolution.com/sitemap.xml',
   }
 }
